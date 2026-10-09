@@ -11,7 +11,7 @@ export const hero = {
   /** Rendered on two lines. */
   nameLines: ["Stéphane", "Perfetti"],
   intro: `${siteConfig.descriptionLong}`,
-  ctaLabel: "Me contacter",
+  ctaLabel: "Demander un devis gratuit",
   ctaHref: `mailto:${siteConfig.contact.email}`,
   photo: {
     src: "/images/hero-portrait.webp",
@@ -115,5 +115,5 @@ export const journalHeading = {
 export const cta = {
   title: "Un besoin, une question ?",
   body: "Décrivez-moi votre situation en quelques lignes. Je reviens vers vous avec les options possibles. Le devis est gratuit.",
-  primaryLabel: "Me contacter",
+  primaryLabel: "Décrire mon besoin",
 };

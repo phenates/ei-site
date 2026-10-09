@@ -20,7 +20,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  min-height: 82px;
+  min-height: 68px;
 }
 
 /* The logo images carry the wordmark, so the brand link is just the image.
@@ -62,6 +62,10 @@
 .nav a:hover::after { width: 100%; }
 
 .hdr-cta { display: inline-flex; }
+/* Compact header button: keeps the header height driven by min-height */
+.hdr .btn { padding: 4px 4px 4px 20px; gap: 10px; font-size: 14px; }
+.hdr .btn > span { padding-block: 0; }
+.hdr .btn > i { width: 34px; height: 34px; }
 .burger {
   display: none;
   width: 44px;
