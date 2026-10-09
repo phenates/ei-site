@@ -19,13 +19,19 @@
   /* Faded client-logo grey: 3.2:1 on white, which clears AA for the 19px bold wordmarks. */
   --swp-faint: #94a3b8;
   --swp-shell: #ffffff;
+  /* Surfaces that stay dark in both themes (footer, buttons) / cards / stats band */
+  --swp-panel: #0f172a;
+  --swp-band: #1e293b;
+  --swp-card: #ffffff;
+  --swp-glass: rgba(255, 255, 255, 0.92);
+  color-scheme: light;
 
   /* Status */
   --swp-live: #3fa34d;
 
   /* Typography */
-  --font-display: 'Space Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --font-body: 'Inter Tight', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
 
   /* Layout */
   --pad: clamp(20px, calc((100vw - 1320px) / 2), 300px);
@@ -43,4 +49,21 @@
 
   /* Motion */
   --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/* Dark theme: swaps the text/background roles. Toggled via
+   <html data-theme="dark"> (see the head script in BaseLayout). */
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --swp-ink: #f1f5f9;
+  --swp-graphite: #e2e8f0;
+  --swp-slate: #94a3b8;
+  --swp-mist: #1e293b;
+  --swp-line: #334155;
+  --swp-faint: #64748b;
+  --swp-shell: #0f172a;
+  --swp-panel: #0f172a;
+  --swp-band: #1e293b;
+  --swp-card: #0f172a;
+  --swp-glass: rgba(15, 23, 42, 0.88);
 }

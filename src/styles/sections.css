@@ -5,7 +5,7 @@
   position: sticky;
   top: 0;
   z-index: 60;
-  background: rgba(255, 255, 255, 0.92);
+  background: var(--swp-glass);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid transparent;
@@ -48,7 +48,7 @@
   bottom: 0;
   height: 2px;
   width: 0;
-  background: var(--swp-ink);
+  background: var(--swp-panel);
   transition: width 0.3s var(--ease);
 }
 .nav a:hover,
@@ -71,7 +71,7 @@
 .mnav {
   border-top: 1px solid var(--swp-line);
   padding: 14px var(--pad) 26px;
-  background: #fff;
+  background: var(--swp-card);
   max-height: calc(100dvh - 82px);
   overflow-y: auto;
 }
@@ -163,7 +163,7 @@
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.82);
+  background: var(--swp-glass);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   display: grid;
@@ -171,7 +171,7 @@
   color: var(--swp-graphite);
   transition: background 0.28s var(--ease), color 0.28s var(--ease), transform 0.28s var(--ease);
 }
-.hero-social a:hover { background: var(--swp-ink); color: var(--swp-lime); transform: translateY(-2px); }
+.hero-social a:hover { background: var(--swp-panel); color: var(--swp-lime); transform: translateY(-2px); }
 
 .hero-avail {
   display: flex;
@@ -217,13 +217,13 @@
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  border: 2.5px solid #fff;
+  border: 2.5px solid var(--swp-shell);
   object-fit: cover;
   margin-left: -11px;
 }
 .stack img:first-child { margin-left: 0; }
 .stack-more {
-  background: var(--swp-ink);
+  background: var(--swp-panel);
   color: #fff;
   display: grid;
   place-items: center;
@@ -430,7 +430,7 @@
 /* ============================================================
    5. Dark stats band
    ============================================================ */
-.band { background: var(--swp-graphite); color: #fff; }
+.band { background: var(--swp-band); color: #fff; }
 .band .muted { color: rgba(255, 255, 255, 0.6); }
 .band-h {
   text-align: center;
@@ -524,7 +524,7 @@
   left: 20px;
   bottom: 20px;
   right: 20px;
-  background: rgba(255, 255, 255, 0.94);
+  background: var(--swp-glass);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: var(--r-md);
@@ -574,7 +574,7 @@
   overflow: hidden;
 }
 .svc-card:hover,
-.svc-card:focus-within { background: var(--swp-ink); color: #fff; transform: translateY(-5px); }
+.svc-card:focus-within { background: var(--swp-panel); color: #fff; transform: translateY(-5px); }
 .svc-card:hover .muted,
 .svc-card:focus-within .muted,
 .svc-card:hover .svc-num,
@@ -630,7 +630,7 @@
   gap: clamp(12px, 1.4vw, 18px);
 }
 .kit-item {
-  background: #fff;
+  background: var(--swp-card);
   border-radius: var(--r-md);
   padding: 22px 20px;
   display: flex;
@@ -701,7 +701,7 @@
   top: 16px;
   left: 16px;
   z-index: 1;
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--swp-glass);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   padding: 6px 13px;
@@ -760,7 +760,7 @@
   transition: background 0.35s var(--ease), padding-inline 0.35s var(--ease);
 }
 .award:hover { background: var(--swp-mist); padding-inline: 20px; }
-.recognition .award:hover { background: #fff; }
+.recognition .award:hover { background: var(--swp-card); }
 .award-yr { font-family: var(--font-display); font-size: 15px; font-weight: 600; color: var(--swp-slate); }
 .award h3 { font-size: clamp(19px, 1.9vw, 26px); letter-spacing: -0.026em; }
 .award p { font-size: 14.4px; color: var(--swp-slate); }
@@ -783,7 +783,7 @@
   gap: clamp(14px, 1.7vw, 22px);
 }
 .tst-card {
-  background: #fff;
+  background: var(--swp-card);
   border-radius: var(--r-md);
   padding: clamp(24px, 2.4vw, 32px);
   display: flex;
@@ -932,7 +932,7 @@
 .cta p { max-width: 50ch; margin: 0 auto 34px; color: rgba(255, 255, 255, 0.86); font-size: 16px; }
 .cta .eyebrow { color: rgba(255, 255, 255, 0.85); }
 .cta .eyebrow::before { background: #fff; }
-.cta .btn-ink { background: #fff; color: var(--swp-ink); }
+.cta .btn-ink { background: #fff; color: #0f172a; }
 .cta .btn-ink > i { background: var(--swp-lime-deep); color: #fff; }
 .cta .btn-outline-ink { color: #fff; box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, 0.55); }
 .cta .btn-outline-ink > i { background: rgba(255, 255, 255, 0.18); color: #fff; }
@@ -944,7 +944,7 @@
 /* ============================================================
    16. Footer
    ============================================================ */
-.ftr { background: var(--swp-ink); color: #fff; padding-top: clamp(52px, 5.4vw, 84px); }
+.ftr { background: var(--swp-panel); color: #fff; padding-top: clamp(52px, 5.4vw, 84px); }
 .ftr-top {
   display: grid;
   grid-template-columns: minmax(0, 1.5fr) repeat(3, minmax(0, 1fr));

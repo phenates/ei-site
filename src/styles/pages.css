@@ -59,7 +59,7 @@
   border-radius: 6px;
 }
 .prose pre {
-  background: var(--swp-ink);
+  background: var(--swp-panel);
   color: #f4f6ef;
   padding: 20px 22px;
   border-radius: var(--r-md);
@@ -110,7 +110,7 @@
 .case-fact p,
 .case-fact li { font-size: 14.8px; line-height: 1.6; }
 .case-fact ul { display: grid; gap: 5px; }
-.case-fact .pill { background: #fff; margin: 3px 4px 0 0; }
+.case-fact .pill { background: var(--swp-card); margin: 3px 4px 0 0; }
 
 .results {
   display: grid;
@@ -118,7 +118,7 @@
   gap: clamp(16px, 2vw, 26px);
   margin: clamp(34px, 4vw, 52px) 0;
   padding: clamp(26px, 3vw, 38px);
-  background: var(--swp-ink);
+  background: var(--swp-panel);
   color: #fff;
   border-radius: var(--r-lg);
 }
@@ -257,7 +257,7 @@ a.contact-card:hover { background: var(--swp-lime); }
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: #fff;
+  background: var(--swp-card);
   display: grid;
   place-items: center;
   flex: none;
