@@ -13,28 +13,28 @@ import type { SiteConfig } from '~/types';
  * back here through `import.meta.env.SITE`.
  */
 export const siteConfig: SiteConfig = {
-  name: 'SWP Freelancer Portfolio',
+  name: 'Stéphane Perfetti',
 
   logo: {
     header: { src: '/images/header-logo.webp', width: 164, height: 58 },
     footer: { src: '/images/footer-logo.webp', width: 164, height: 58 },
   },
 
-  author: 'Robin Vale',
+  author: 'Stéphane Perfetti',
   role: 'Art direction & interface design',
   title: 'SWP Freelancer Portfolio — Art direction & interface design',
   description:
     'Portfolio of Robin Vale, an independent art director and interface designer working with small product teams on identity, interface and design systems.',
   url: import.meta.env.SITE ?? 'https://swp-freelancer-portfolio.vercel.app',
   ogImage: '/og-default.png',
-  locale: 'en',
+  locale: 'fr',
   themeColor: '#818cf8',
 
   contact: {
-    email: 'hello@example.com',
+    email: 'contact@stephane-perfetti.fr',
     phone: '+1 (000) 555-0100',
     phoneHref: '+10005550100',
-    location: 'Remote — working across nine time zones',
+    location: 'Montpellier et à distance',
     availability: 'Two project slots open from September',
     // Paste a Formspree / Web3Forms / Netlify endpoint here to make the
     // contact form live. See "Contact form" in the README.
@@ -42,16 +42,14 @@ export const siteConfig: SiteConfig = {
   },
 
   social: [
-    { label: 'Dribbble', href: 'https://dribbble.com/', icon: 'dribbble' },
-    { label: 'Behance', href: 'https://www.behance.net/', icon: 'behance' },
-    { label: 'LinkedIn', href: 'https://www.linkedin.com/', icon: 'linkedin' },
-    { label: 'Instagram', href: 'https://www.instagram.com/', icon: 'instagram' },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/st%c3%a9phane-perfetti/', icon: 'linkedin' },
+    { label: 'GitHub', href: 'https://www.github.com/phenates', icon: 'github' },
   ],
 
   about:
     'An independent art direction and design practice for teams of under twenty. Fewer clients, harder questions early, and a handover that does not quietly depend on me.',
 
-  copyrightHolder: 'SWP Freelancer Portfolio',
+  copyrightHolder: 'Stéphane Perfetti EI',
 };
 
 export default siteConfig;

@@ -1,0 +1,69 @@
+---
+/**
+ * Legal notice (mentions légales) page.
+ * Required by French law (LCEN, art. 6-III) for any professional website.
+ * Content is in French on purpose: it targets French visitors and authorities.
+ */
+import PageLayout from '~/layouts/PageLayout.astro';
+import siteConfig from '~/config/site';
+
+const updated = 'Dernière mise à jour : octobre 2026.';
+---
+
+<PageLayout
+  title="Mentions légales"
+  heading="Mentions légales"
+  eyebrow="Informations légales"
+  intro="Éditeur du site, hébergement et données personnelles."
+  description={`Mentions légales du site de ${siteConfig.name}, entrepreneur individuel.`}
+  crumbs={[{ label: 'Mentions légales' }]}
+>
+  <section class="wrap sec" style="padding-top:0">
+    <div class="prose rev">
+      <h2>Éditeur du site</h2>
+      <p>
+        <strong>Stéphane Perfetti</strong>, entrepreneur individuel<br />
+        SIREN : 429 994 338 · SIRET : 429 994 338 00029<br />
+        Activité : gestion d'installations informatiques (APE 6203Z)<br />
+        Localisation : Montpellier (Hérault), Occitanie<br />
+        TVA non applicable, art. 293 B du CGI (franchise en base)<br />
+        Courriel : <a href={`mailto:${siteConfig.contact.email}`}>{siteConfig.contact.email}</a>
+      </p>
+
+      <h2>Directeur de la publication</h2>
+      <p>Stéphane Perfetti.</p>
+
+      <h2>Hébergement</h2>
+      <p>
+        Ce site est hébergé par GitHub Pages, service de GitHub, Inc.,
+        88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis
+        (<a href="https://pages.github.com/" rel="noopener noreferrer">pages.github.com</a>).
+      </p>
+
+      <h2>Données personnelles</h2>
+      <p>
+        Ce site est statique : il ne dépose aucun cookie, n'utilise aucun outil de mesure
+        d'audience et ne charge aucun script tiers. Les polices sont servies depuis ce
+        domaine.
+      </p>
+      <p>
+        L'hébergeur conserve des journaux d'accès standards (adresse IP, navigateur, page
+        demandée, date), selon sa propre politique de conservation.
+      </p>
+      <p>
+        Si vous m'écrivez, votre adresse e-mail et le contenu de votre message sont utilisés
+        uniquement pour répondre à votre demande. Ils ne sont ni transmis ni revendus. Vous
+        pouvez demander l'accès, la rectification ou la suppression de ces données à tout
+        moment à l'adresse ci-dessus.
+      </p>
+
+      <h2>Propriété intellectuelle</h2>
+      <p>
+        Les textes et contenus de ce site sont la propriété de l'éditeur. Le thème Astro
+        utilisé est « SWP Freelancer Portfolio », distribué sous licence MIT.
+      </p>
+
+      <p class="mini muted">{updated}</p>
+    </div>
+  </section>
+</PageLayout>

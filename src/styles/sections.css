@@ -341,7 +341,7 @@
 .collab-copy { order: 2; }
 .collab-visual { order: 1; position: relative; }
 .collab-h { margin: 16px 0 20px; }
-.collab-h b { font-weight: 700; }
+.collab-h b { font-weight: 500; }
 .collab-sub {
   font-size: 15.5px;
   color: var(--swp-slate);
@@ -484,7 +484,7 @@
   display: block;
   font-family: var(--font-display);
   font-size: clamp(38px, 5.4vw, 64px);
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: -0.04em;
   line-height: 1;
 }
@@ -725,7 +725,7 @@
 .proc-step b {
   font-family: var(--font-display);
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--swp-slate);

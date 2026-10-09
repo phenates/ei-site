@@ -19,6 +19,7 @@ export type IconName =
   | 'dribbble'
   | 'facebook'
   | 'flag'
+  | 'github'
   | 'grid'
   | 'instagram'
   | 'layers'
