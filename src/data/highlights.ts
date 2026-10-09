@@ -103,7 +103,7 @@ export const journalHeading = {
 };
 
 export const cta = {
-  title: 'Have you got something that deserves doing properly?',
-  body: 'Tell me what is broken, who it is breaking for, and what happens if it stays that way. That is enough for me to come back with a scope and a number.',
-  primaryLabel: 'Send the brief',
+  title: 'Un besoin, une question ?',
+  body: 'Décrivez-moi votre situation en quelques lignes. Je reviens vers vous avec les options possibles. Le devis est gratuit.',
+  primaryLabel: 'Me contacter',
 };

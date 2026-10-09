@@ -2,41 +2,40 @@ import type { FaqItem } from '~/types';
 
 export const faq: FaqItem[] = [
   {
-    question: 'How long does a project usually take?',
+    question: "Intervenez-vous chez les petites structures ?",
     answer:
-      'A full product engagement runs six weeks end to end. An identity is three to four. A second opinion is one week. If your deadline is tighter than that, say so early and you will get an honest answer about whether it fits.',
+      "Oui. Je travaille surtout avec les TPE, PME et professions libérales sans service informatique, à Montpellier et en Occitanie, sur site ou à distance.",
   },
   {
-    question: 'Is the price fixed?',
+    question: "Mission ponctuelle ou suivi régulier ?",
     answer:
-      'Yes, wherever the scope is defined. One number, one payment schedule and a written list of what sits inside it. Anything outside becomes a conversation before work starts, never a surprise line on an invoice.',
+      "Les deux. Une mission est cadrée avec un périmètre écrit. Un suivi régulier peut ensuite prendre le relais : mises à jour, supervision, assistance.",
   },
   {
-    question: 'Can you work alongside our engineers?',
+    question: "Comment se passe la première prise de contact ?",
     answer:
-      'That is the normal arrangement. I join your stand-ups, write specs in whatever format your team already uses, and stay reachable for a month after handover so questions get answered rather than guessed at.',
+      "Vous m'écrivez votre besoin et nous en discutons. Je vous propose ensuite un périmètre et un devis. Rien ne démarre sans votre accord écrit.",
   },
   {
-    question: 'What lands in my hands at the end?',
+    question: "Que recevrai-je à la fin d'une mission ?",
     answer:
-      'Source files, a component library with every state documented, a token sheet, exported assets and a written spec covering behaviour and edge cases. Build engagements also include the front-end templates and a configured theme.',
+      "Une installation qui fonctionne et une documentation claire : procédures, accès, schéma. Vous ne dépendez pas de moi pour la suite.",
   },
   {
-    question: 'Do you take small pieces of work?',
+    question: "Qui garde la main sur mes données ?",
     answer:
-      'Sometimes. A single landing page, a pricing rewrite or a one-week review all fit comfortably. Anything larger tends to work better as a short sprint than as hours scattered across a quarter.',
+      "Vous. Les accès, les comptes et les sauvegardes restent à votre nom. Je privilégie des outils ouverts et documentés, pour éviter l'enfermement chez un éditeur.",
   },
   {
-    question: 'Who owns the work at the end?',
+    question: "Le devis est-il gratuit ?",
     answer:
-      'You do, completely, once the final payment clears. Files transfer into your accounts rather than living in mine. I only ask permission to show the work publicly, and I will keep it private if you would rather.',
+      "Oui. Chaque mission est chiffrée selon son périmètre, après un échange sur votre besoin. Le devis ne vous engage à rien.",
   },
 ];
 
 export const faqHeading = {
   eyebrow: 'FAQ',
-  title: 'Asked before nearly every project.',
-  asideTitle: 'Not sure yet?',
-  asideBody:
-    'Send a paragraph about what is going wrong. If I am not right for it I will say so and name someone who is, usually the same day.',
+  title: 'Questions fréquentes.',
+  asideTitle: 'Une autre question ?',
+  asideBody: 'Écrivez-moi en quelques lignes, je vous répondrai avec plaisir.',
 };
