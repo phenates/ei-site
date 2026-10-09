@@ -139,7 +139,7 @@
   font-size: 15.5px;
   line-height: 1.7;
   color: var(--swp-slate);
-  margin-bottom: 32px;
+  margin-bottom: 12px;
 }
 
 .hero-card {
@@ -1050,8 +1050,8 @@
 
 /* Typewriter line in the hero aside */
 .hero-typed {
-  margin: 14px 0 0;
-  min-height: 3.2em; /* room for two lines: avoids layout shift while typing */
+  margin: 0 0 20px;
+  min-height: 1.6em; /* one line on desktop: avoids layout shift while typing */
   font-size: 14px;
   font-weight: 500;
   color: var(--swp-lime-deep);
@@ -1068,3 +1068,5 @@
 }
 @keyframes hero-caret { 50% { opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .hero-typed-caret { animation: none; } }
+
+@media (max-width: 560px) { .hero-typed { min-height: 3.2em; } } /* two lines on mobile */
