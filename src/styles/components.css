@@ -213,7 +213,6 @@
 :root[data-theme='dark'] .hdr { border-bottom-color: var(--swp-line); }
 :root[data-theme='dark'] .ftr { border-top: 1px solid var(--swp-line); }
 :root[data-theme='dark'] .svc-card,
-:root[data-theme='dark'] .tst-card,
-:root[data-theme='dark'] .faq-item { border: 1px solid var(--swp-line); }
+:root[data-theme='dark'] .tst-card { border: 1px solid var(--swp-line); }
 :root[data-theme='dark'] .nav a[aria-current='page'],
 :root[data-theme='dark'] .nav a:hover { color: var(--swp-lime); }
