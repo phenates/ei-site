@@ -4,7 +4,7 @@ icon: chart
 number: '06'
 excerpt: "Automatisation des tâches et des processus répétitifs, supervision avec alertes."
 description: "Automatisation d'administration Linux et supervision légère avec alertes."
-tags: ['Bash', 'Ansible', 'Workflows', 'Supervision']
+tags: ['Bash', 'Ansible', 'Workflows']
 features:
   - "Automatisation des mises à jour, rapports d'état et sauvegardes planifiées"
   - "Automatisation de processus métier : workflows entre vos outils, moins de saisie manuelle"

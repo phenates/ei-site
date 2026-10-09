@@ -33,7 +33,10 @@ const projects = defineCollection({
     /** Meta description for the case-study page. */
     description: z.string(),
     image: imageRef.optional(),
-    artwork: z.enum(['identity', 'dashboard', 'app-screens']).optional(),
+    artwork: z.enum([
+      'identity', 'dashboard', 'app-screens',
+      'backup', 'segmentation', 'monitoring', 'proxmox', 'audit',
+    ]).optional(),
     services: z.array(z.string()).default([]),
     technologies: z.array(z.string()).default([]),
     results: z

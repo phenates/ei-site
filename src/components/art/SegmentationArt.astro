@@ -1,0 +1,39 @@
+---
+/** Network segmentation. Schematic artwork, drawn for this site. */
+interface Props { label?: string }
+const { label = "Schéma de segmentation réseau : pare-feu central et quatre VLAN isolés" } = Astro.props;
+---
+
+<svg viewBox="0 0 600 450" role="img" aria-label={label} font-family="Inter, system-ui, sans-serif">
+  <rect width="600" height="450" fill="#0f172a"></rect>
+  <g stroke="#60a5fa" stroke-width="2.5" fill="none" stroke-linecap="round">
+    <path d="M228 170L172 120"></path>
+    <path d="M372 170L428 120"></path>
+    <path d="M228 280L172 330"></path>
+    <path d="M372 280L428 330"></path>
+  </g>
+  <!-- firewall -->
+  <rect x="225" y="165" width="150" height="120" rx="18" fill="#1e293b" stroke="#60a5fa" stroke-width="2.5"></rect>
+  <path d="M300 190l30 11v22c0 17-12 29-30 36-18-7-30-19-30-36v-22z" fill="none" stroke="#60a5fa" stroke-width="3" stroke-linejoin="round"></path>
+  <path d="M287 224l9 9 17-18" fill="none" stroke="#60a5fa" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+  <text x="300" y="274" text-anchor="middle" font-size="13" font-weight="600" fill="#f1f5f9">Pare-feu · règles inter-VLAN</text>
+
+  <g fill="#1e293b" stroke="#334155" stroke-width="1.5">
+    <rect x="40" y="50" width="150" height="70" rx="14"></rect>
+    <rect x="410" y="50" width="150" height="70" rx="14"></rect>
+    <rect x="40" y="330" width="150" height="70" rx="14"></rect>
+    <rect x="410" y="330" width="150" height="70" rx="14"></rect>
+  </g>
+  <g font-size="15" font-weight="600" fill="#f1f5f9" text-anchor="middle">
+    <text x="115" y="82">VLAN Serveurs</text>
+    <text x="485" y="82">VLAN Postes</text>
+    <text x="115" y="362">VLAN Invités</text>
+    <text x="485" y="362">VLAN Équipements</text>
+  </g>
+  <g font-size="12" fill="#94a3b8" text-anchor="middle">
+    <text x="115" y="102">Services internes</text>
+    <text x="485" y="102">Utilisateurs</text>
+    <text x="115" y="382">Accès isolé</text>
+    <text x="485" y="382">Imprimantes, IoT</text>
+  </g>
+</svg>

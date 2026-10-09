@@ -1,0 +1,41 @@
+---
+/** Network audit. Schematic artwork, drawn for this site. */
+interface Props { label?: string }
+const { label = "Schéma d'audit réseau : constats classés par thème, à corriger ou conformes" } = Astro.props;
+---
+
+<svg viewBox="0 0 600 450" role="img" aria-label={label} font-family="Inter, system-ui, sans-serif">
+  <rect width="600" height="450" fill="#0f172a"></rect>
+  <text x="300" y="62" text-anchor="middle" font-size="22" font-weight="600" fill="#f1f5f9">Constats et recommandations</text>
+
+  <g>
+    <rect x="50" y="100" width="500" height="64" rx="14" fill="#1e293b" stroke="#334155" stroke-width="1.5"></rect>
+    <rect x="50" y="184" width="500" height="64" rx="14" fill="#1e293b" stroke="#334155" stroke-width="1.5"></rect>
+    <rect x="50" y="268" width="500" height="64" rx="14" fill="#1e293b" stroke="#334155" stroke-width="1.5"></rect>
+    <rect x="50" y="352" width="500" height="64" rx="14" fill="#1e293b" stroke="#334155" stroke-width="1.5"></rect>
+  </g>
+  <g font-size="16" font-weight="600" fill="#f1f5f9">
+    <text x="104" y="138">Mises à jour</text>
+    <text x="104" y="222">Accès distants</text>
+    <text x="104" y="306">Sauvegardes</text>
+    <text x="104" y="390">Comptes et droits</text>
+  </g>
+
+  <!-- status: ok / to fix -->
+  <g stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="78" cy="132" r="13" fill="#60a5fa" stroke="none"></circle>
+    <path d="M71.5 132l4.5 4.5 8-9" stroke="#0f172a"></path>
+    <circle cx="78" cy="216" r="13" fill="none" stroke="#38bdf8"></circle>
+    <path d="M78 209v8M78 221v.5" stroke="#38bdf8"></path>
+    <circle cx="78" cy="300" r="13" fill="#60a5fa" stroke="none"></circle>
+    <path d="M71.5 300l4.5 4.5 8-9" stroke="#0f172a"></path>
+    <circle cx="78" cy="384" r="13" fill="none" stroke="#38bdf8"></circle>
+    <path d="M78 377v8M78 389v.5" stroke="#38bdf8"></path>
+  </g>
+  <g font-size="12" font-weight="600" text-anchor="end">
+    <text x="520" y="136" fill="#60a5fa">Conforme</text>
+    <text x="520" y="220" fill="#38bdf8">À corriger</text>
+    <text x="520" y="304" fill="#60a5fa">Conforme</text>
+    <text x="520" y="388" fill="#38bdf8">À corriger</text>
+  </g>
+</svg>

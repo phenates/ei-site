@@ -1,0 +1,67 @@
+---
+/** Monitoring with alerts. Schematic artwork, drawn for this site. */
+interface Props { label?: string }
+const { label = "Schéma de supervision : agents sur les hôtes, hub central, alertes par e-mail et Telegram" } = Astro.props;
+---
+
+<svg viewBox="0 0 600 450" role="img" aria-label={label} font-family="Inter, system-ui, sans-serif">
+  <defs>
+    <marker id="mo-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#60a5fa"></path>
+    </marker>
+  </defs>
+  <rect width="600" height="450" fill="#0f172a"></rect>
+
+  <!-- agents -->
+  <g fill="#1e293b" stroke="#334155" stroke-width="1.5">
+    <rect x="30" y="90" width="150" height="62" rx="12"></rect>
+    <rect x="30" y="194" width="150" height="62" rx="12"></rect>
+    <rect x="30" y="298" width="150" height="62" rx="12"></rect>
+  </g>
+  <g font-size="14" font-weight="600" fill="#f1f5f9">
+    <text x="48" y="118">Hôte 1</text>
+    <text x="48" y="222">Hôte 2</text>
+    <text x="48" y="326">Hôte 3</text>
+  </g>
+  <g font-size="11" fill="#94a3b8">
+    <text x="48" y="138">Agent · CPU, RAM, disque</text>
+    <text x="48" y="242">Agent · CPU, RAM, disque</text>
+    <text x="48" y="346">Agent · CPU, RAM, disque</text>
+  </g>
+  <g fill="none" stroke="#60a5fa" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M128 130l8-10 8 6 10-14"></path>
+    <path d="M128 234l8-4 8-8 10 4"></path>
+    <path d="M128 338l8-6 8 2 10-12"></path>
+  </g>
+
+  <g stroke="#60a5fa" stroke-width="2.5" fill="none">
+    <path d="M184 121C220 121 220 225 258 225" marker-end="url(#mo-arrow)"></path>
+    <path d="M184 225H258" marker-end="url(#mo-arrow)"></path>
+    <path d="M184 329C220 329 220 225 258 225" marker-end="url(#mo-arrow)"></path>
+  </g>
+
+  <!-- hub -->
+  <rect x="262" y="170" width="110" height="110" rx="18" fill="#1e293b" stroke="#60a5fa" stroke-width="2.5"></rect>
+  <circle cx="317" cy="215" r="18" fill="none" stroke="#60a5fa" stroke-width="3"></circle>
+  <circle cx="317" cy="215" r="5" fill="#60a5fa"></circle>
+  <text x="317" y="262" text-anchor="middle" font-size="15" font-weight="600" fill="#f1f5f9">Hub</text>
+
+  <!-- alerts -->
+  <g stroke="#60a5fa" stroke-width="2.5" fill="none">
+    <path d="M376 205C400 205 400 140 424 140" marker-end="url(#mo-arrow)"></path>
+    <path d="M376 245C400 245 400 310 424 310" marker-end="url(#mo-arrow)"></path>
+  </g>
+  <g fill="#1e293b" stroke="#334155" stroke-width="1.5">
+    <rect x="428" y="108" width="142" height="64" rx="12"></rect>
+    <rect x="428" y="278" width="142" height="64" rx="12"></rect>
+  </g>
+  <g fill="none" stroke="#60a5fa" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="446" y="128" width="26" height="20" rx="3"></rect>
+    <path d="M446 131l13 9 13-9"></path>
+    <path d="M446 316l26-9-8 26-6-10z"></path>
+  </g>
+  <g font-size="14" font-weight="600" fill="#f1f5f9">
+    <text x="486" y="144">Alerte e-mail</text>
+    <text x="486" y="320">Alerte Telegram</text>
+  </g>
+</svg>

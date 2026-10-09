@@ -3,7 +3,7 @@ title: "Virtualisation Proxmox"
 category: Systèmes
 excerpt: "Machines virtuelles, snapshots et conteneurs Docker sur un hôte Proxmox."
 description: "Virtualisation de services sur Proxmox avec snapshots."
-artwork: app-screens
+artwork: proxmox
 technologies: ['Proxmox', 'KVM', 'Docker']
 featured: true
 order: 4

@@ -9,9 +9,16 @@
 import IdentityArt from './IdentityArt.astro';
 import DashboardArt from './DashboardArt.astro';
 import AppScreensArt from './AppScreensArt.astro';
+import BackupArt from './BackupArt.astro';
+import SegmentationArt from './SegmentationArt.astro';
+import MonitoringArt from './MonitoringArt.astro';
+import ProxmoxArt from './ProxmoxArt.astro';
+import AuditArt from './AuditArt.astro';
 
 interface Props {
-  name: 'identity' | 'dashboard' | 'app-screens';
+  name:
+    | 'identity' | 'dashboard' | 'app-screens'
+    | 'backup' | 'segmentation' | 'monitoring' | 'proxmox' | 'audit';
   label?: string;
 }
 
@@ -21,3 +28,8 @@ const { name, label } = Astro.props;
 {name === 'identity' && <IdentityArt label={label} />}
 {name === 'dashboard' && <DashboardArt label={label} />}
 {name === 'app-screens' && <AppScreensArt label={label} />}
+{name === 'backup' && <BackupArt label={label} />}
+{name === 'segmentation' && <SegmentationArt label={label} />}
+{name === 'monitoring' && <MonitoringArt label={label} />}
+{name === 'proxmox' && <ProxmoxArt label={label} />}
+{name === 'audit' && <AuditArt label={label} />}

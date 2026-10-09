@@ -1099,3 +1099,13 @@
 
 /* Hero photo card: slightly smaller, centred in its column */
 .hero-card { width: 100%; max-width: 350px; justify-self: center; }
+
+/* Missions: 3 columns (6 cards = 3 + 3). Réalisations: 3 + 2, centred second row. */
+.svc { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 900px) { .svc { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .svc { grid-template-columns: 1fr; } }
+@media (min-width: 900px) {
+  .work-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .work-grid > * { grid-column: span 2; }
+  .work-grid > :nth-child(n + 4):nth-last-child(-n + 2) { grid-column: span 3; }
+}
