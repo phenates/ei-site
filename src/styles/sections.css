@@ -1043,3 +1043,24 @@
 .ftr-top { justify-items: center; text-align: center; }
 .ftr-top .ftr-cbox,
 .ftr-top .ftr-soc { justify-content: center; }
+
+/* Typewriter line in the hero aside */
+.hero-typed {
+  margin: 14px 0 0;
+  min-height: 3.2em; /* room for two lines: avoids layout shift while typing */
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--swp-lime-deep);
+}
+:root[data-theme='dark'] .hero-typed { color: var(--swp-lime); }
+.hero-typed-caret {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  margin-left: 2px;
+  vertical-align: -0.12em;
+  background: currentColor;
+  animation: hero-caret 1s steps(1) infinite;
+}
+@keyframes hero-caret { 50% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .hero-typed-caret { animation: none; } }

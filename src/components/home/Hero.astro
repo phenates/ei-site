@@ -42,6 +42,9 @@ import { hero } from '~/data/highlights';
       </h2>
       <p class="hero-kpi">{hero.aside.kpi} <span>{hero.aside.kpiLabel}</span></p>
       <p class="hero-note">{hero.aside.note}</p>
+      <p class="hero-typed" data-typed={JSON.stringify(hero.aside.typed)} aria-live="off">
+        <span class="hero-typed-text">{hero.aside.typed[0]}</span><span class="hero-typed-caret" aria-hidden="true"></span>
+      </p>
       <div class="hero-social">
       {
         siteConfig.social.map((s) => (
@@ -54,5 +57,42 @@ import { hero } from '~/data/highlights';
     </div>
   </div>
 
-  <Icon name="asterisk" class="hero-mark" />
+  <!-- <Icon name="asterisk" class="hero-mark" /> -->
 </section>
+
+<script>
+  /**
+   * Typewriter effect for the hero aside. Without JS, or with reduced motion,
+   * the first line stays as static text.
+   */
+  const el = document.querySelector<HTMLElement>('[data-typed]');
+  if (el && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const lines: string[] = JSON.parse(el.dataset.typed ?? '[]');
+    const out = el.querySelector<HTMLElement>('.hero-typed-text')!;
+    let line = 0;
+    let pos = lines[0]?.length ?? 0;
+    let deleting = true; // first line is already shown: start by erasing it
+
+    const tick = () => {
+      const text = lines[line];
+      if (!deleting) {
+        pos++;
+        out.textContent = text.slice(0, pos);
+        if (pos === text.length) {
+          deleting = true;
+          return setTimeout(tick, 2200); // pause on the full line
+        }
+        return setTimeout(tick, 55);
+      }
+      pos--;
+      out.textContent = text.slice(0, Math.max(pos, 0));
+      if (pos <= 0) {
+        deleting = false;
+        line = (line + 1) % lines.length;
+        return setTimeout(tick, 350);
+      }
+      setTimeout(tick, 28);
+    };
+    if (lines.length > 1) setTimeout(tick, 2500);
+  }
+</script>
