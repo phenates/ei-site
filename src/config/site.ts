@@ -35,7 +35,7 @@ export const siteConfig: SiteConfig = {
     phone: '+1 (000) 555-0100',
     phoneHref: '+10005550100',
     location: 'Montpellier et à distance',
-    availability: 'Two project slots open from September',
+    availability: 'Disponible pour de nouvelles missions',
     // Paste a Formspree / Web3Forms / Netlify endpoint here to make the
     // contact form live. See "Contact form" in the README.
     formEndpoint: '',

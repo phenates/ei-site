@@ -27,6 +27,9 @@
    `width`/`height` on the <img> hold the ratio; the CSS sets the size. */
 .brand { display: inline-flex; align-items: center; flex: none; }
 .brand img { height: 38px; width: auto; }
+.brand-txt { font-family: var(--font-display); font-size: 21px; font-weight: 400; letter-spacing: -0.03em; color: var(--swp-ink); }
+.brand-txt b { font-weight: 700; }
+.ftr-brand .brand-txt { color: #fff; font-size: 24px; }
 
 @media (max-width: 480px) {
   .brand img { height: 32px; }
@@ -147,9 +150,9 @@
   border-radius: var(--r-md);
   overflow: hidden;
   background: var(--swp-mist);
-  aspect-ratio: 1 / 1.26;
+  aspect-ratio: 1 / 1.1;
 }
-.hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 18%; }
+.hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 25%; }
 
 .hero-social {
   position: absolute;
@@ -244,7 +247,9 @@
   font-weight: 400;
   color: var(--swp-slate);
   letter-spacing: 0;
-  margin-left: 6px;
+  display: block;
+  margin-top: 4px;
+  line-height: 1.4;
 }
 .hero-note { font-size: 14px; font-weight: 600; }
 
@@ -1009,3 +1014,24 @@
 
 @media (max-width: 900px) { .ftr-top { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 560px) { .ftr-top { grid-template-columns: 1fr; } }
+
+/* Hero background: network picture, full width, dark theme only.
+   An indigo veil keeps it in the site palette and the text readable. */
+:root[data-theme='dark'] .hero-bg {
+  background:
+    linear-gradient(180deg, rgba(15, 23, 42, 0.55) 0%, var(--swp-shell) 100%),
+    linear-gradient(135deg, rgba(99, 102, 241, 0.28), rgba(139, 92, 246, 0.18)),
+    url('/images/hero-bg.webp') center top / cover no-repeat;
+}
+
+/* Header: theme toggle sits next to the contact button */
+.hdr-right { display: flex; align-items: center; gap: 12px; flex: none; }
+.brand-txt i { font-style: normal; font-size: 0.62em; font-weight: 600; letter-spacing: 0.04em; opacity: 0.7; margin-left: 2px; vertical-align: 0.18em; }
+
+/* Hero: social icons now live under the aside note */
+.hero-right .hero-social {
+  position: static;
+  flex-direction: row;
+  margin-top: 18px;
+}
+.hero-right .hero-social a { background: var(--swp-mist); }

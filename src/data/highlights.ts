@@ -1,3 +1,5 @@
+import siteConfig from '~/config/site';
+
 /**
  * Copy blocks for the homepage sections that are one-of-a-kind.
  * Longer, repeating content lives in its own data file or content
@@ -5,28 +7,28 @@
  */
 
 export const hero = {
-  greeting: 'Hello. The name is',
+  greeting: 'Bonjour, je suis',
   /** Rendered on two lines. */
-  nameLines: ['Robin', 'Vale'],
+  nameLines: ['Stéphane', 'Perfetti'],
   intro:
-    'I art-direct and design for teams who already know what they are building, and need it to feel like one thing instead of forty.',
-  ctaLabel: 'Book a call',
-  ctaHref: '/contact/',
+    "Administrateur systèmes et réseaux indépendant à Montpellier. J'aide les TPE et PME sans DSI à garder une infrastructure fiable, sauvegardée et maintenue.",
+  ctaLabel: 'Me contacter',
+  ctaHref: `mailto:${siteConfig.contact.email}`,
   photo: {
     src: '/images/hero-portrait.webp',
-    alt: 'Robin Vale, art director, photographed against a plain studio wall',
-    width: 960,
-    height: 1210,
+    alt: 'Stéphane Perfetti, administrateur systèmes et réseaux',
+    width: 457,
+    height: 457,
   },
   aside: {
-    roleLine: ['Independent of the Year 2026', 'Art Direction & Interface'],
-    title: ['Art', 'Direction'],
+    roleLine: ['Administration systèmes & réseaux', 'Montpellier · Occitanie'],
+    title: ['Systèmes', '& Réseaux'],
     /** Small avatar stack — decorative, so the images carry empty alt text. */
-    stack: ['/images/avatar-02.webp', '/images/avatar-01.webp', '/images/avatar-03.webp'],
-    stackBadge: '98%',
-    kpi: '210+',
-    kpiLabel: 'launches behind me',
-    note: 'Working across nine time zones',
+    stack: [] as string[],
+    stackBadge: '',
+    kpi: 'RNCP 6',
+    kpiLabel: 'Administrateur systèmes, réseaux et cybersécurité',
+    note: 'Sur site en Occitanie ou à distance',
   },
 };
 

@@ -16,15 +16,8 @@ const year = new Date().getFullYear();
 <footer class="ftr">
   <div class="wrap ftr-top">
     <div>
-      <a class="ftr-brand" href="/">
-        <img
-          src={siteConfig.logo.footer.src}
-          alt={`${siteConfig.name} — home`}
-          width={siteConfig.logo.footer.width}
-          height={siteConfig.logo.footer.height}
-          loading="lazy"
-          decoding="async"
-        />
+      <a class="ftr-brand" href="/" aria-label={`${siteConfig.name} — accueil`}>
+        <span class="brand-txt">Stéphane <b>Perfetti</b> <i>EI</i></span>
       </a>
       <p class="ftr-about">{siteConfig.about}</p>
       <div class="ftr-soc">
