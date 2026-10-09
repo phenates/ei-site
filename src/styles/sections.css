@@ -1020,7 +1020,7 @@
 :root[data-theme='dark'] .hero-bg {
   background:
     linear-gradient(180deg, rgba(15, 23, 42, 0.55) 0%, var(--swp-shell) 100%),
-    linear-gradient(135deg, rgba(99, 102, 241, 0.28), rgba(139, 92, 246, 0.18)),
+    linear-gradient(135deg, rgba(37, 99, 235, 0.28), rgba(2, 132, 199, 0.18)),
     url('/images/hero-bg.webp') center top / cover no-repeat;
 }
 

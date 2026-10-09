@@ -6,11 +6,11 @@
    ============================================================ */
 :root {
   /* Brand palette */
-  --swp-lime: #818cf8;
-  --swp-lime-deep: #6366f1;
-  --swp-violet: #8b5cf6;
-  --swp-gradient: linear-gradient(135deg, #6366f1, #8b5cf6);
-  --swp-gradient-hover: linear-gradient(135deg, #4f46e5, #7c3aed);
+  --swp-lime: #60a5fa;
+  --swp-lime-deep: #2563eb;
+  --swp-violet: #0284c7;
+  --swp-gradient: linear-gradient(135deg, #2563eb, #0284c7);
+  --swp-gradient-hover: linear-gradient(135deg, #1d4ed8, #0369a1);
   --swp-ink: #0f172a;
   --swp-graphite: #1e293b;
   --swp-slate: #475569; /* nudged 2 points darker than #6e7269 for AA on --swp-mist */

@@ -9,7 +9,8 @@ import type { NavItem } from '~/types';
 export const primaryNav: NavItem[] = [
   { label: 'Accueil', href: '/' },
   { label: 'Services', href: '/#services', anchor: '#services' },
-  { label: 'Méthode', href: '/#process', anchor: '#process' },
+  // Section Process disabled (re-enable with the Process component in index.astro)
+  // { label: 'Méthode', href: '/#process', anchor: '#process' },
   { label: 'FAQ', href: '/#faq', anchor: '#faq' },
   { label: 'Contact', href: '/#contact', anchor: '#contact' },
 ];
@@ -20,7 +21,7 @@ export const mobileExtraNav: NavItem[] = [];
 export const footerNav = {
   explore: [
     { label: 'Services', href: '/#services' },
-    { label: 'Méthode', href: '/#process' },
+    // { label: 'Méthode', href: '/#process' },
     { label: 'FAQ', href: '/#faq' },
     { label: 'Contact', href: '/#contact' },
   ] satisfies NavItem[],

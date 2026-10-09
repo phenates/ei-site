@@ -31,7 +31,7 @@ export const siteConfig: SiteConfig = {
   url: import.meta.env.SITE ?? 'https://stephane-perfetti.fr',
   ogImage: '/og-default.png',
   locale: 'fr',
-  themeColor: '#818cf8',
+  themeColor: '#60a5fa',
 
   contact: {
     email: 'contact@stephane-perfetti.fr',
