@@ -24,10 +24,10 @@ const projects = defineCollection({
   schema: z.object({
     title: z.string(),
     /** Shown on the card and in the case-study header. */
-    client: z.string(),
-    year: z.string(),
+    client: z.string().optional(),
+    year: z.string().optional(),
     /** Drives the filter chips on /work. */
-    category: z.enum(['Product', 'Brand', 'Web']),
+    category: z.enum(['Product', 'Brand', 'Web', 'Sauvegarde', 'Réseau', 'Supervision', 'Systèmes']),
     /** One line under the title on cards. */
     excerpt: z.string(),
     /** Meta description for the case-study page. */

@@ -11,16 +11,15 @@ interface Props {
 }
 
 const { project, eager = false, class: className } = Astro.props;
-const { title, excerpt, year, category, image, artwork } = project.data;
+const { title, excerpt, category, image, artwork } = project.data;
 ---
 
-<a
+<article
   class:list={['work-card', className]}
-  href={`/work/${project.id}/`}
   data-category={category}
 >
   <div class="work-media">
-    <span class="work-year">{year}</span>
+    <span class="work-year">{category}</span>
     {
       image ? (
         <img
@@ -41,6 +40,5 @@ const { title, excerpt, year, category, image, artwork } = project.data;
       <h3>{title}</h3>
       <span>{excerpt}</span>
     </div>
-    <span class="work-go"><Icon name="arrow" class="ic-sm" /></span>
   </div>
-</a>
+</article>

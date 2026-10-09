@@ -61,38 +61,38 @@ export const collaborate = {
 };
 
 export const about = {
-  eyebrow: 'Background',
-  title: 'Forty projects taught me the same lesson forty times.',
-  body: 'I spent my twenties inside agencies making things look expensive. Somewhere around the fourth rebrand that never shipped, I started asking what the work was actually for. These days I take fewer clients, ask the awkward questions in week one, and stay until the thing is live.',
+  eyebrow: 'À propos',
+  title: 'Une infrastructure qui tourne, sans que vous ayez à y penser.',
+  body: "Administrateur systèmes et réseaux indépendant à Montpellier, j'interviens auprès des TPE et PME sans DSI : sauvegardes testées, messagerie sécurisée, serveurs documentés. Chaque mission se termine par une documentation claire, pour que vous ne dépendiez pas de moi.",
   points: [
-    'I read your support inbox before I open a design file.',
-    'One senior person on the work from first call to launch — nothing gets passed down.',
-    'If I think the project is the wrong project, you hear it before you pay me.',
+    "Un seul interlocuteur, de l'audit à la documentation remise.",
+    'Mission ponctuelle ou suivi régulier, selon votre besoin.',
+    'Open source et auto-hébergement : plus de contrôle, des coûts prévisibles.',
   ],
   image: {
     src: '/images/about-studio.webp',
-    alt: 'Designers arranging sticky notes and printed layouts across a studio table',
+    alt: 'Illustration provisoire',
     width: 900,
     height: 954,
   },
   badge: {
-    value: '15',
-    label: 'Years working independently, almost always with teams of under twenty people.',
+    value: '10+',
+    label: 'services en production sur mon homelab.',
   },
-  ctaLabel: 'See the work',
-  ctaHref: '/work/',
+  ctaLabel: 'Voir les missions',
+  ctaHref: '#services',
 };
 
 export const servicesHeading = {
-  eyebrow: 'Engagements',
-  title: 'Six ways to put me to work.',
-  ctaLabel: 'Ask for a scope',
-  ctaHref: '/contact/',
+  eyebrow: 'Missions',
+  title: 'Six missions concrètes.',
+  ctaLabel: 'Décrire mon besoin',
+  ctaHref: `mailto:${siteConfig.contact.email}`,
 };
 
 export const workHeading = {
-  eyebrow: 'Selected work',
-  title: 'Six projects, six different arguments.',
+  eyebrow: 'Réalisations',
+  title: 'Quelques réalisations.',
 };
 
 export const journalHeading = {

@@ -1035,3 +1035,6 @@
   margin-top: 18px;
 }
 .hero-right .hero-social a { background: var(--swp-mist); }
+
+/* About without picture: one readable column */
+.about-grid { grid-template-columns: minmax(0, 54rem); }

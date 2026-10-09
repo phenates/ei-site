@@ -17,7 +17,7 @@ const { title, icon, number, excerpt, tags } = service.data;
     <span class="svc-ic"><Icon name={icon} class="ic-lg" /></span>
     <span class="svc-num">{number}</span>
   </div>
-  <Heading><a class="stretch" href={`/services/${service.id}/`}>{title}</a></Heading>
+  <Heading>{title}</Heading>
   <p class="muted">{excerpt}</p>
   {
     tags.length > 0 && (
