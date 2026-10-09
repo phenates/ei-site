@@ -22,6 +22,32 @@ export function personSchema(site: SiteConfig): Json {
   };
 }
 
+/** Local business entry used by search engines for the legal entity. */
+export function professionalServiceSchema(site: SiteConfig): Json {
+  return {
+    '@type': 'ProfessionalService',
+    '@id': `${site.url}/#business`,
+    name: `${site.author} EI`,
+    description: site.descriptionLong,
+    url: `${site.url}/`,
+    email: site.contact.email,
+    image: `${site.url}${site.ogImage}`,
+    founder: { '@id': `${site.url}/#person` },
+    identifier: { '@type': 'PropertyValue', propertyID: 'SIREN', value: site.legal.siren.replace(/\s/g, '') },
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: site.area.city,
+      addressRegion: site.area.department,
+      addressCountry: 'FR',
+    },
+    areaServed: [
+      { '@type': 'City', name: site.area.city },
+      { '@type': 'AdministrativeArea', name: site.area.department },
+    ],
+    sameAs: site.social.map((s) => s.href),
+  };
+}
+
 export function websiteSchema(site: SiteConfig): Json {
   return {
     '@type': 'WebSite',

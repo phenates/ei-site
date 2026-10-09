@@ -952,7 +952,7 @@
 .ftr { background: var(--swp-panel); color: #fff; padding-top: clamp(52px, 5.4vw, 84px); }
 .ftr-top {
   display: grid;
-  grid-template-columns: minmax(0, 1.5fr) repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: clamp(26px, 3vw, 48px);
   padding-bottom: clamp(38px, 4vw, 60px);
 }
@@ -1038,3 +1038,8 @@
 
 /* About without picture: one readable column */
 .about-grid { grid-template-columns: minmax(0, 54rem); }
+
+/* Footer: columns and their content centred */
+.ftr-top { justify-items: center; text-align: center; }
+.ftr-top .ftr-cbox,
+.ftr-top .ftr-soc { justify-content: center; }

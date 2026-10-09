@@ -77,6 +77,8 @@ export interface SiteConfig {
   title: string;
   /** Default meta description. */
   description: string;
+  /** Longer description, used in structured data (JSON-LD). */
+  descriptionLong: string;
   /** Canonical origin. Sourced from `site` in `astro.config.mjs`. */
   url: string;
   /** Default Open Graph image, relative to the site root. */
@@ -98,6 +100,16 @@ export interface SiteConfig {
      * unconnected — see the "Contact form" section of the README.
      */
     formEndpoint: string;
+  };
+  /** Operating area (city and department). */
+  area: { city: string; department: string };
+  /** Legal identity of the sole proprietorship. */
+  legal: {
+    siren: string;
+    siret: string;
+    ape: string;
+    activity: string;
+    vat: string;
   };
   social: SocialLink[];
   /** Footer blurb. */

@@ -9,7 +9,7 @@ import sitemap from '@astrojs/sitemap';
  * before deploying — it is used for canonical URLs, Open Graph tags, the
  * sitemap, the RSS feed and robots.txt.
  */
-const DEFAULT_SITE = 'https://swp-freelancer-portfolio.vercel.app';
+const DEFAULT_SITE = 'https://stephane-perfetti.fr';
 
 export default defineConfig({
   site: process.env.SITE_URL ?? DEFAULT_SITE,

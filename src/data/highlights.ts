@@ -21,14 +21,14 @@ export const hero = {
     height: 457,
   },
   aside: {
-    roleLine: ['Administration systèmes & réseaux', 'Montpellier · Occitanie'],
+    roleLine: ['Administration systèmes & réseaux', `${siteConfig.area.city} · ${siteConfig.area.department}`],
     title: ['Systèmes', '& Réseaux'],
     /** Small avatar stack — decorative, so the images carry empty alt text. */
     stack: [] as string[],
     stackBadge: '',
     kpi: 'RNCP 6',
     kpiLabel: 'Administrateur systèmes, réseaux et cybersécurité',
-    note: 'Sur site en Occitanie ou à distance',
+    note: `Sur site dans l'${siteConfig.area.department} ou à distance`,
   },
 };
 

@@ -21,11 +21,14 @@ export const siteConfig: SiteConfig = {
   },
 
   author: 'Stéphane Perfetti',
-  role: 'Art direction & interface design',
-  title: 'SWP Freelancer Portfolio — Art direction & interface design',
+  role: 'Administrateur systèmes et réseaux indépendant',
+  title: 'Stéphane Perfetti — Administrateur systèmes et réseaux à Montpellier',
   description:
-    'Portfolio of Robin Vale, an independent art director and interface designer working with small product teams on identity, interface and design systems.',
-  url: import.meta.env.SITE ?? 'https://swp-freelancer-portfolio.vercel.app',
+    "Administrateur systèmes et réseaux indépendant à Montpellier. Systèmes d'information et automatisation pour TPE, PME et artisans.",
+  /** Longer description, used in structured data (JSON-LD). */
+  descriptionLong:
+    "Administrateur systèmes et réseaux indépendant à Montpellier. J'interviens auprès des TPE, PME et artisans dans la gestion de leurs systèmes d'information et l'automatisation des processus.",
+  url: import.meta.env.SITE ?? 'https://stephane-perfetti.fr',
   ogImage: '/og-default.png',
   locale: 'fr',
   themeColor: '#818cf8',
@@ -34,11 +37,26 @@ export const siteConfig: SiteConfig = {
     email: 'contact@stephane-perfetti.fr',
     phone: '+1 (000) 555-0100',
     phoneHref: '+10005550100',
-    location: 'Montpellier et à distance',
+    location: 'Montpellier (Hérault) et à distance',
     availability: 'Disponible pour de nouvelles missions',
     // Paste a Formspree / Web3Forms / Netlify endpoint here to make the
     // contact form live. See "Contact form" in the README.
     formEndpoint: '',
+  },
+
+  /** Where the business operates. Used by hero, legal page, footer and JSON-LD. */
+  area: {
+    city: 'Montpellier',
+    department: 'Hérault',
+  },
+
+  /** Legal identity of the sole proprietorship (EI). */
+  legal: {
+    siren: '429 994 338',
+    siret: '429 994 338 00029',
+    ape: '6203Z',
+    activity: "gestion d'installations informatiques",
+    vat: 'TVA non applicable, art. 293 B du CGI (franchise en base)',
   },
 
   social: [
@@ -47,7 +65,7 @@ export const siteConfig: SiteConfig = {
   ],
 
   about:
-    'An independent art direction and design practice for teams of under twenty. Fewer clients, harder questions early, and a handover that does not quietly depend on me.',
+    "Administrateur systèmes et réseaux indépendant à Montpellier. J'aide les TPE et PME à garder une infrastructure fiable, sauvegardée et documentée.",
 
   copyrightHolder: 'Stéphane Perfetti EI',
 };

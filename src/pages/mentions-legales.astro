@@ -23,10 +23,10 @@ const updated = 'Dernière mise à jour : octobre 2026.';
       <h2>Éditeur du site</h2>
       <p>
         <strong>Stéphane Perfetti</strong>, entrepreneur individuel<br />
-        SIREN : 429 994 338 · SIRET : 429 994 338 00029<br />
-        Activité : gestion d'installations informatiques (APE 6203Z)<br />
-        Localisation : Montpellier (Hérault), Occitanie<br />
-        TVA non applicable, art. 293 B du CGI (franchise en base)<br />
+        SIREN : {siteConfig.legal.siren} · SIRET : {siteConfig.legal.siret}<br />
+        Activité : {siteConfig.legal.activity} (APE {siteConfig.legal.ape})<br />
+        Localisation : {siteConfig.area.city} ({siteConfig.area.department})<br />
+        {siteConfig.legal.vat}<br />
         Courriel : <a href={`mailto:${siteConfig.contact.email}`}>{siteConfig.contact.email}</a>
       </p>
 

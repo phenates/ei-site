@@ -15,7 +15,7 @@ const year = new Date().getFullYear();
 
 <footer class="ftr">
   <div class="wrap ftr-top">
-    <div>
+    <!-- <div>
       <a class="ftr-brand" href="/" aria-label={`${siteConfig.name} — accueil`}>
         <span class="brand-txt">Stéphane <b>Perfetti</b> <i>EI</i></span>
       </a>
@@ -29,7 +29,7 @@ const year = new Date().getFullYear();
           ))
         }
       </div>
-    </div>
+    </div> -->
 
     <nav aria-labelledby="ftr-explore">
       <h2 id="ftr-explore">Navigation</h2>
@@ -38,12 +38,12 @@ const year = new Date().getFullYear();
       </ul>
     </nav>
 
-    <nav aria-labelledby="ftr-services">
+    <!-- <nav aria-labelledby="ftr-services">
       <h2 id="ftr-services">Services</h2>
       <ul class="ftr-links">
         {services.map((s) => <li><a href="/#services">{s.data.title}</a></li>)}
       </ul>
-    </nav>
+    </nav> -->
 
     <div>
       <h2>Contact</h2>
@@ -55,11 +55,20 @@ const year = new Date().getFullYear();
         <Icon name="pin" class="ic-sm" />
         <span>{siteConfig.contact.location}</span>
       </div>
+      <div class="ftr-soc">
+        {
+          siteConfig.social.map((s) => (
+            <a href={s.href} aria-label={s.label} rel="noopener noreferrer" target="_blank">
+              <Icon name={s.icon} class="ic-sm" />
+            </a>
+          ))
+        }
+      </div>
     </div>
   </div>
 
   <div class="wrap ftr-bot">
-    <p>&copy; {year} {siteConfig.copyrightHolder} · SIREN 429 994 338 · Montpellier</p>
+    <p>&copy; {year} {siteConfig.copyrightHolder} · SIREN {siteConfig.legal.siren} · {siteConfig.area.city}</p>
     <nav aria-label="Legal">
       {footerNav.legal.map((l) => <a href={l.href}>{l.label}</a>)}
     </nav>

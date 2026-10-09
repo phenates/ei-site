@@ -15,9 +15,9 @@ import Journal from '~/components/home/Journal.astro';
 import Faq from '~/components/home/Faq.astro';
 import Cta from '~/components/home/Cta.astro';
 import siteConfig from '~/config/site';
-import { graph, personSchema, websiteSchema } from '~/lib/jsonld';
+import { graph, personSchema, professionalServiceSchema, websiteSchema } from '~/lib/jsonld';
 
-const jsonLd = graph([personSchema(siteConfig), websiteSchema(siteConfig)]);
+const jsonLd = graph([personSchema(siteConfig), professionalServiceSchema(siteConfig), websiteSchema(siteConfig)]);
 ---
 
 <BaseLayout

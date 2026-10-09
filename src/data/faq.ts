@@ -1,10 +1,11 @@
 import type { FaqItem } from '~/types';
+import siteConfig from '~/config/site';
 
 export const faq: FaqItem[] = [
   {
     question: "Intervenez-vous chez les petites structures ?",
     answer:
-      "Oui. Je travaille surtout avec les TPE, PME et professions libérales sans service informatique, à Montpellier et en Occitanie, sur site ou à distance.",
+      `Oui. Je travaille surtout avec les TPE, PME, artisans et professions libérales sans service informatique, à ${siteConfig.area.city} et dans l'${siteConfig.area.department}, sur site ou à distance.`,
   },
   {
     question: "Mission ponctuelle ou suivi régulier ?",
