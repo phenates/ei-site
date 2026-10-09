@@ -13,6 +13,9 @@ import { hero } from '~/data/highlights';
         {hero.nameLines.map((line) => <em>{line}</em>)}
       </h1>
       <p class="hero-copy">{hero.intro}</p>
+      <p class="hero-typed" data-typed={JSON.stringify(hero.aside.typed)} aria-live="off">
+        <span class="hero-typed-text">{hero.aside.typed[0]}</span><span class="hero-typed-caret" aria-hidden="true"></span>
+      </p>
       <Button href={hero.ctaHref} variant="lime">{hero.ctaLabel}</Button>
     </div>
 
@@ -42,9 +45,6 @@ import { hero } from '~/data/highlights';
       </h2>
       <p class="hero-kpi">{hero.aside.kpi} <span>{hero.aside.kpiLabel}</span></p>
       <p class="hero-note">{hero.aside.note}</p>
-      <p class="hero-typed" data-typed={JSON.stringify(hero.aside.typed)} aria-live="off">
-        <span class="hero-typed-text">{hero.aside.typed[0]}</span><span class="hero-typed-caret" aria-hidden="true"></span>
-      </p>
       <div class="hero-social">
       {
         siteConfig.social.map((s) => (

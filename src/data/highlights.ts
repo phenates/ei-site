@@ -31,12 +31,12 @@ export const hero = {
     kpi: "RNCP 6",
     kpiLabel: "Administrateur systèmes, réseaux et cybersécurité",
     note: `Sur site dans l'${siteConfig.area.department} ou à distance`,
-    /** Lines typed one after the other above the social icons. */
+    /** Lines typed effect */
     typed: [
-      'Administrateur Systèmes • Réseaux • Sécurité',
-      'Self-hosting • Automatisation • Open source',
-      'Sysadmin • Architecture réseau • DevOps',
-      'Disponible pour de nouvelles missions',
+      "Administrateur Systèmes • Réseaux • Sécurité",
+      "Self-hosting • Automatisation • Open source",
+      "Sysadmin • Architecture réseau • DevOps",
+      "Disponible pour de nouvelles missions",
     ],
   },
 };
