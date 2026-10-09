@@ -58,9 +58,9 @@
 .btn:hover > i { transform: rotate(45deg); }
 .btn:disabled { opacity: 0.55; cursor: not-allowed; transform: none; }
 
-.btn-lime { background: var(--swp-lime); color: var(--swp-ink); }
-.btn-lime > i { background: var(--swp-ink); color: var(--swp-lime); }
-.btn-lime:hover { background: var(--swp-lime-deep); }
+.btn-lime { background: var(--swp-gradient); color: #fff; }
+.btn-lime > i { background: #fff; color: var(--swp-lime-deep); }
+.btn-lime:hover { background: var(--swp-gradient-hover); }
 
 .btn-ink { background: var(--swp-ink); color: #fff; }
 .btn-ink > i { background: var(--swp-lime); color: var(--swp-ink); }
@@ -77,9 +77,9 @@
 .btn-outline-ink {
   background: transparent;
   color: var(--swp-ink);
-  box-shadow: inset 0 0 0 1.5px rgba(16, 17, 16, 0.25);
+  box-shadow: inset 0 0 0 1.5px rgba(15, 23, 42, 0.25);
 }
-.btn-outline-ink > i { background: rgba(16, 17, 16, 0.08); color: var(--swp-ink); }
+.btn-outline-ink > i { background: rgba(15, 23, 42, 0.08); color: var(--swp-ink); }
 .btn-outline-ink:hover { box-shadow: inset 0 0 0 1.5px var(--swp-ink); }
 
 .btn-ghost-light {

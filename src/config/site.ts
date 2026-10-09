@@ -28,7 +28,7 @@ export const siteConfig: SiteConfig = {
   url: import.meta.env.SITE ?? 'https://swp-freelancer-portfolio.vercel.app',
   ogImage: '/og-default.png',
   locale: 'en',
-  themeColor: '#c8f14d',
+  themeColor: '#818cf8',
 
   contact: {
     email: 'hello@example.com',
