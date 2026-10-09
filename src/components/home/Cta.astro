@@ -23,5 +23,25 @@ const { id = 'cta' } = Astro.props;
     <div class="cta-actions">
       <Button href={`mailto:${siteConfig.contact.email}`} variant="ink">{cta.primaryLabel}</Button>
     </div>
+    <div class="cta-mail">
+      <span>ou écrivez à</span>
+      <a href={`mailto:${siteConfig.contact.email}`}>{siteConfig.contact.email}</a>
+      <button type="button" class="cta-copy" data-copy={siteConfig.contact.email}>Copier</button>
+    </div>
   </div>
 </section>
+
+<script>
+  // Copy the contact address; if the Clipboard API fails, ask the visitor to select it by hand.
+  document.querySelectorAll<HTMLButtonElement>('.cta-copy').forEach((btn) => {
+    btn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(btn.dataset.copy ?? '');
+        btn.textContent = 'Copié';
+      } catch {
+        btn.textContent = 'Sélectionnez l\'adresse';
+      }
+      setTimeout(() => (btn.textContent = 'Copier'), 2000);
+    });
+  });
+</script>

@@ -1070,3 +1070,29 @@
 @media (prefers-reduced-motion: reduce) { .hero-typed-caret { animation: none; } }
 
 @media (max-width: 560px) { .hero-typed { min-height: 3.2em; } } /* two lines on mobile */
+
+/* Contact fallback: address shown in clear text + copy button (no mail client needed) */
+.cta-mail {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 22px;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.9);
+}
+.cta-mail a { color: #fff; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.cta-copy {
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.16);
+  border: 0;
+  border-radius: var(--r-pill);
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: background 0.2s var(--ease);
+}
+.cta-copy:hover { background: rgba(255, 255, 255, 0.28); }
